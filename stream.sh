@@ -1,6 +1,9 @@
 #!/bin/bash
+
+# Load variables and set lights to defaults
 source config.sh
 source lights.sh
+
 # Starting waiting loop
 while true
 do
