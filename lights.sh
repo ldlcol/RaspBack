@@ -62,28 +62,4 @@ setOutput $GREEN
 # Turn lights off to begin
 allLightsOff
 
-# Loop forever until user presses Ctrl-C
-while [ 1 ]
-do
-  # Red
-  setLightState $RED $ON
-  sleep 3
 
-  # Red and Yellow
-  setLightState $YELLOW $ON
-  sleep 1
-
-  # Green
-  setLightState $RED $OFF
-  setLightState $YELLOW $OFF
-  setLightState $GREEN $ON
-  sleep 5
- 
-  # Yellow
-  setLightState $GREEN $OFF
-  setLightState $YELLOW $ON
-  sleep 2
-
-  # Yellow off
-  setLightState $YELLOW $OFF
-done
