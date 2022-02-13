@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # VIDEO INPUT
 videocard="/dev/video0"
 videocardtype="mjpeg"
