@@ -1,17 +1,20 @@
 #!/bin/bash
 source config.sh
+source lights.sh
 # Starting waiting loop
 while true
 do
-        #LAUNCHING STREAM       
+        #LAUNCHING STREAM
+        setLightState $GREEN $OFF
+        setLightState $RED $ON
         sleep 2
+        setLightState $RED $OFF
+        setLightState $GREEN $ON
         ffmpeg \
                 -re -f v4l2 -thread_queue_size 2048 -s $videosize -input_format $videocardtype -framerate $framerate -i $videocard \
                 -f alsa -ac $audiochannels -thread_queue_size 4096 -i $audiocard -c:a $audioencoder -b:a $bitrateaudio -ar $sampling \
                 -vf format=$outputformat -c:v $encoder -b:v $bitrate -preset $preset -f flv - | ffmpeg -i - -c copy -f flv -drop_pkts_on_overflow 1 -attempt_recovery 1 -recovery_wait_time 1 $streamkey
 done
-
-
 
 ###############################################################
 # -x264opts keyint=$keyframe -g $framerate -pix_fmt yuv420p \
