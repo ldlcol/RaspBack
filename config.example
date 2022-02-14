@@ -9,7 +9,7 @@ audiocard="hw:CARD=MS2109,DEV=0"
 
 # VIDEO OUTPUT
 videosize="1280x720"
-encoder="h264_v4l2m2m"
+encoder="libx264"
 preset="ultrafast"
 framerate="30"
 keyframe="60"
@@ -19,9 +19,9 @@ outputformat="yuv420p"
 #AUDIO OUTPUT
 bitrateaudio="128k"
 audioencoder="aac"
-audiochannels=2"
+audiochannels="2"
 sampling="48000"
 # RTMP DETAILS
-ingesturl="rtmp://mrs02.contribute.live-video.net/app"
-ingestkey="live_60231354_NH447CqBW5ZOmAN98Xm1ss"
+ingesturl="rtmp://rtmp.ldlc-ol.com"
+ingestkey="truc"
 streamkey="$ingesturl/$ingestkey"
