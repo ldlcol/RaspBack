@@ -11,6 +11,7 @@ do
         setLightState $GREEN $OFF
         setLightState $RED $ON
         sleep 2
+        kill -9 ffmpeg
         setLightState $RED $OFF
         setLightState $GREEN $ON
         ffmpeg \
