@@ -15,8 +15,8 @@ do
         setLightState $RED $OFF
         setLightState $GREEN $ON
         ffmpeg \
-                -re -f v4l2 -thread_queue_size 2048 -s $videosize -input_format $videocardtype -framerate $framerate -i $videocard \
-                -f alsa -ac $audiochannels -thread_queue_size 4096 -i $audiocard -c:a $audioencoder -b:a $bitrateaudio -ar $sampling \
+                -re -f v4l2 -s $videosize -input_format $videocardtype -framerate $framerate -i $videocard \
+                -f alsa -ac $audiochannels -i $audiocard -c:a $audioencoder -b:a $bitrateaudio -ar $sampling \
                 -vf format=$outputformat -c:v $encoder -b:v $bitrate -preset $preset -f flv - | ffmpeg -i - -c copy -f flv -drop_pkts_on_overflow 1 -attempt_recovery 1 -recovery_wait_time 1 $streamkey
 done
 
