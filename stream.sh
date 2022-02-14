@@ -11,7 +11,7 @@ do
         setLightState $GREEN $OFF
         setLightState $RED $ON
         sleep 2
-        kill -9 ffmpeg
+        pkill -9 -f ffmpeg
         setLightState $RED $OFF
         setLightState $GREEN $ON
         ffmpeg \
