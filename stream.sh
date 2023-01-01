@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Load variables and set lights to defaults
-source /home/pi/RaspBack/config.sh
-source /home/pi/RaspBack/lights.sh
+source /home/pi/RaspBack/main.conf
+source /home/pi/RaspBack/lights.conf
 
 # Starting waiting loop
 while true
@@ -11,7 +11,7 @@ do
         setLightState $GREEN $OFF
         setLightState $RED $ON
         sleep 2
-        pkill -9 -f ffmpeg
+        # pkill -9 -f ffmpeg
         setLightState $RED $OFF
         setLightState $GREEN $ON
         ffmpeg \
