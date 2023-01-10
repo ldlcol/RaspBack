@@ -9,15 +9,15 @@ audiocard="hw:CARD=MS2109,DEV=0"
 
 # VIDEO OUTPUT
 videosize="1280x720"
-encoder="libx264"
-preset="ultrafast"
+encoder="v4l2m2m"
+preset="faster"
 framerate="30"
 keyframe="60"
-bitrate="4000k"
+bitrate="5000k"
 outputformat="yuv420p"
 
 #AUDIO OUTPUT
-bitrateaudio="128k"
+bitrateaudio="96k"
 audioencoder="aac"
 audiochannels="2"
 sampling="48000"
