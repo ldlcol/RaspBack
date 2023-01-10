@@ -10,4 +10,4 @@ chmod +x /home/pi/RaspBack/stream.sh
 cp /home/pi/RaspBack/main.conf.example /home/pi/RaspBack/main.conf
 
 # Setting up the script at launch
-echo "bash /home/pi/RaspBack/stream.sh" >> /etc/rc.local
+echo "sh /home/pi/RaspBack/stream.sh" >> /etc/rc.local
