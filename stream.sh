@@ -2,7 +2,7 @@
 
 # Load variables and set lights to defaults
 source /home/pi/RaspBack/main.conf
-source /home/pi/RaspBack/lights.conf
+# source /home/pi/RaspBack/lights.conf
 
 # Starting waiting loop
 while true
