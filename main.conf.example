@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # VIDEO INPUT
 videocard="/dev/video0"

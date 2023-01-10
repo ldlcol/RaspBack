@@ -17,7 +17,13 @@ chmod +x /home/pi/RaspBack/stream.sh
 cp /home/pi/RaspBack/main.conf.example /home/pi/RaspBack/main.conf
 
 # Setting up the script at launch
-echo "sh /home/pi/RaspBack/stream.sh" >> /etc/rc.local
+echo "bash /home/pi/RaspBack/stream.sh" >> /etc/rc.local
+
+or crontab -e
+
+@reboot bash /home/pi/RaspBack/stream.sh
+
+
 ```
 
 For overclocking, change /boot/config.txt

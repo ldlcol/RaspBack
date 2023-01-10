@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Load variables and set lights to defaults
 source /home/pi/RaspBack/main.conf
