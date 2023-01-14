@@ -13,7 +13,7 @@ encoder="v4l2m2m"
 preset="veryfast"
 framerate="30"
 keyframe="60"
-bitrate="5000k"
+bitrate="2000k"
 outputformat="yuv420p"
 
 #AUDIO OUTPUT
@@ -22,6 +22,6 @@ audioencoder="aac"
 audiochannels="2"
 sampling="48000"
 # RTMP DETAILS
-ingesturl="rtmp://rtmp.server.com"
+ingesturl="rtmp://rtmp.server.com/"
 ingestkey="truc"
-streamkey="$ingesturl/$ingestkey"
+streamkey="$ingesturl$ingestkey"
